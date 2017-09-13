@@ -1,11 +1,11 @@
-//index.html
-  <div ng-repeat="choice in allChoices">
-    <input type="checkbox" ng-click="addToSelected(choice)">
-    {{choice.name}}
-  </div>
-  <button ng-click="showMeThaChoices()">submit</button>
-
-  <button ng-click="getSources()">CLICK</button>
+// //index.html
+//   <div ng-repeat="choice in allChoices">
+//     <input type="checkbox" ng-click="addToSelected(choice)">
+//     {{choice.name}}
+//   </div>
+//   <button ng-click="showMeThaChoices()">submit</button>
+//
+//   <button ng-click="getSources()">CLICK</button>
 
 
   //newsCtrl.js
@@ -39,3 +39,15 @@
     })
   }
 })
+
+
+//newsSrv
+this.getSources = function(sources){
+  var promises = [];
+  sources.forEach(function(cur){
+    promises.push($http.get(baseUrl + cur.id + key))
+  })
+  return Promise.all(promises).then(function(response){
+    return response;
+  })
+}

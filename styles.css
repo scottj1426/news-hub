@@ -1,3 +1,7 @@
 button{
   font-size: 50px;
 }
+
+.picks{
+  list-style: none;
+}

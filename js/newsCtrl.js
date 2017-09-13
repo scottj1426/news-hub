@@ -4,14 +4,23 @@ angular.module("newsHub").controller('newsCtrl', function($scope, newsSrv){
  //bring in caetgories from API ,business, entertainment, gaming, general, music, politics, science-and-nature, sport, technology.
 
 $scope.choices = [];
- $scope.addTo = function (pick){
-   if($scope.choices.includes(pick)){
-     $scope.choices = $scope.choices.filter(function(){
-       return cur.category !== choice.category
-     })
-   }
-   else{
-     $scope.choices.push(pick)
-   }
- }
+
+$scope.selectedChoices = [];
+
+$scope.toggleCategory = function(category){
+  if ($scope.selectedChoices.includes(category)){
+    $scope.selectedChoices = $scope.selectedChoices.filter(function(cur){
+      console.log(cur == category);
+      return cur !== category
+    })
+  } else {
+    $scope.selectedChoices.push(category)
+  }
+  // console.log($scope.selectedChoices);
+}
+$scope.showAllResources = function(){
+  newsSrv.getSources($scope.selectedChoices).then(response => {
+    console.log(response)
+  })
+}
 })

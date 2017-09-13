@@ -2,27 +2,23 @@
 
 <h1>Categories<h1>
 
-  <div ng-repeat="choice in allChoices">
-    <input type="checkbox" ng-click="addTo(pick)">
-    {{choice.category}}
-  </div>
-  <button ng-click="showMeThaChoices()">submit</button>
-
-  <button ng-click="getSources()">CLICK</button>
 
 
 
-    <button><li>Business</li></button>
-    <button><li>Entertainment</li></button>
-    <button><li>Gaming</li></button>
-    <button><li>General</li></button>
-    <button><li>music</li></button>
-    <button><li>Polotics</li></button>
-    <button><li>Science</li></button>
-    <button><li>Sports</li></button>
-    <button><li>Tech</li></button>
 
+  <div><Button ng-click="showAllResources()">Ready to Read</Button></div>
 
+<div class="picks">
+    <button ng-click="toggleCategory('business')"><li>Business</li></button>
+    <button ng-click="toggleCategory('entertainment')"><li>Entertainment</li></button>
+    <button ng-click="toggleCategory('gaming')"><li>Gaming</li></button>
+    <button ng-click="toggleCategory('general')"><li>General</li></button>
+    <button ng-click="toggleCategory('music')"><li>Music</li></button>
+    <button ng-click="toggleCategory('politics')"><li>Politics</li></button>
+    <button ng-click="toggleCategory('science-and-nature')"><li>Science</li></button>
+    <button ng-click="toggleCategory('sport')"><li>Sports</li></button>
+    <button ng-click="toggleCategory('technology')"><li>Tech</li></button>
+</div>
 
 
 
