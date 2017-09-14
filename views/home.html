@@ -1,5 +1,13 @@
 <div>
 
+This is the home view
+
 <h1> splash page </h1>
+  <ul ng-repeat="article in articles">
+    <li><a href="{{article.url}}"><img style="height: 150px; width: 200px"src="{{article.urlToImage}}" alt=""></a></li>
+    <li>{{article.title}}</li>
+    <li>{{article.description}}</li>
+  </ul>
+
 
 </div>

@@ -1,13 +1,13 @@
 <div class="new-container">
- <h1>Todays Headlines</h1>
+ <h1>Life is about Choices</h1>
 
-
- <h2> Your choices are:</h2>
 <ul ng-repeat="choice in data">
   <input ng-disabled="selectedChoices.length == 6 && !isSelected" type="checkbox" ng-model="isSelected" ng-click="addToSelected(choice);">
     <li>{{choice.id}}</li>
   <li>{{choice.description}}</li>
 </ul>
 
+
+<button ng-click="storage()" ui-sref="home">Save</button>
 
 </div>
