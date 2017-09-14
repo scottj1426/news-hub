@@ -5,22 +5,38 @@ angular.module("newsHub").controller('newsCtrl', function($scope, newsSrv){
 
 $scope.choices = [];
 
+$scope.selectedCategories = [];
 $scope.selectedChoices = [];
 
 $scope.toggleCategory = function(category){
-  if ($scope.selectedChoices.includes(category)){
-    $scope.selectedChoices = $scope.selectedChoices.filter(function(cur){
-      console.log(cur == category);
+
+  if ($scope.selectedCategories.includes(category)){
+    $scope.selectedCategories = $scope.selectedCategories.filter(function(cur){
+      // console.log(cur == category);
       return cur !== category
     })
   } else {
-    $scope.selectedChoices.push(category)
+    $scope.selectedCategories.push(category)
   }
   // console.log($scope.selectedChoices);
 }
 $scope.showAllResources = function(){
-  newsSrv.getSources($scope.selectedChoices).then(response => {
-    console.log(response)
+  newsSrv.getSources($scope.selectedCategories).then(response => {
+    // console.log(response);
+    $scope.data = response;
+
   })
 }
+$scope.addToSelected = function(choice){
+  if($scope.selectedChoices.includes(choice)){
+    $scope.selectedChoices = $scope.selectedChoices.filter(function(cur){
+      return cur.id != choice.id;
+
+    })
+  } else {
+  $scope.selectedChoices.push(choice);
+  }
+  console.log($scope.selectedChoices)
+}
+
 })

@@ -20,6 +20,7 @@
   $scope.selectedChoices = [];
 
   $scope.addToSelected = function(choice){
+
     if ($scope.selectedChoices.includes(choice)){
       $scope.selectedChoices = $scope.selectedChoices.filter(function(){
         return cur.name !== choice.name

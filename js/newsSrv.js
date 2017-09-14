@@ -19,13 +19,8 @@ this.getSources = function(selected){
         }
       }
       return arr;
-    })  
-
-
-
-
-
-    //  console.log(self.sources.filter(function(cur){
+    })
+      //  console.log(self.sources.filter(function(cur){
     //    return selected.includes(cur.category)
     //  }));
 
@@ -50,4 +45,12 @@ this.getSources = function(selected){
     //    return arr.indexOf(cur) === ind
     //  }));
    })
+
+    //return info on Categories view
+   //restrict user to 6
+
+   //how tie count in with  6 selections
+   //display articles based off pick 6
+
+   //loop array of sources
 })
