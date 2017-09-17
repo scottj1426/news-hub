@@ -1,5 +1,15 @@
 body {
-  background-color: #b3b3b3;
+  background: #457fca; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .picks {
@@ -43,9 +53,40 @@ a:hover {
 
 .card {
   background-color: eggplant;
+  border-color: black;
 }
 
 .cardlook {
   padding: 20px 15px 20px 15px;
   margin: 20px;
+}
+
+.pad {
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+}
+.sources {
+  padding-bottom: 200px;
+  align-items: center;
+  background-color: white;
+}
+li a {
+  display: inline;
+  float: left;
+  display: block;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  margin-bottom: 3%;
+  padding: 20px;
+  margin-bottom: 200px;
+}
+.save {
+  padding: 75px;
+}
+.source {
+  display: inline-block;
+}
+.stuff {
+  background-color: white;
 }

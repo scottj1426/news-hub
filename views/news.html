@@ -1,14 +1,17 @@
-<div class="new-container">
- <h1>Life is about Choices</h1>
+<div class="container">
 
+<div class="source">
 <ul ng-repeat="choice in data">
   <input ng-disabled="selectedChoices.length == 6 && !isSelected" type="checkbox" ng-model="isSelected" ng-click="addToSelected(choice);">
-    <li>{{choice.id}}</li>
-  <li>{{choice.description}}</li>
+        <div class="list-group">
+    <li list-group-item list-group-item-action>{{choice.id}}</li>
+  <li list-group-item list-group-item-action>{{choice.description}}</li>
 </ul>
+</div>
+</div>
 
 
-
+<div class="save">
 <button ng-click="storage()" ui-sref="home">Save</button>
-
+</div>
 </div>
