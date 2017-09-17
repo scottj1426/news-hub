@@ -1,14 +1,14 @@
 body {
-  background: #457fca; /* fallback for old browsers */
+  background: #e52d27; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #5691c8,
-    #457fca
+    #b31217,
+    #e52d27
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #5691c8,
-    #457fca
+    #b31217,
+    #e52d27
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -79,14 +79,39 @@ li a {
   color: white;
   margin-bottom: 3%;
   padding: 20px;
-  margin-bottom: 200px;
-}
-.save {
-  padding: 75px;
-}
+
+
 .source {
   display: inline-block;
 }
 .stuff {
+  background-color: white;
+}
+.list-group {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.btn {
+  color: black;
+  background-size: 20px;
+}
+.containerOver {
+  background-color: white;
+  m
+}
+.change {
+  background: #e52d27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ color: white;
+ padding-top: 40px;
+}
+
+.mid{
+  align-items: center;
+}
+.yes{
   background-color: white;
 }

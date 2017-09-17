@@ -1,17 +1,22 @@
 <div class="container">
+<div class="containerOver">
 
-<div class="source">
 <ul ng-repeat="choice in data">
-  <input ng-disabled="selectedChoices.length == 6 && !isSelected" type="checkbox" ng-model="isSelected" ng-click="addToSelected(choice);">
+  <div>
+    <button class="btn btn-elegant"ng-disabled="selectedChoices.length == 6 && !isSelected"  ng-model="isSelected" ng-click="addToSelected(choice);">
+
+
         <div class="list-group">
-    <li list-group-item list-group-item-action>{{choice.id}}</li>
-  <li list-group-item list-group-item-action>{{choice.description}}</li>
+
+    <li class="list-group-item list-group-item-action change">{{choice.id}}</li>
+  <li class="list-group-item list-group-item-action">{{choice.description}}</li>
 </ul>
+</div>
 </div>
 </div>
 
 
 <div class="save">
-<button ng-click="storage()" ui-sref="home">Save</button>
+<button class="btn btn-elegant "ng-click="storage()" ui-sref="home">Save</button>
 </div>
 </div>
