@@ -1,7 +1,38 @@
-button{
-  font-size: 50px;
+.picks {
+  list-style: none;
 }
 
-.picks{
-  list-style: none;
+/*.containerDimensions {
+  margin: 10vh 10vh 10vh 10vh;
+}*/
+
+a {
+  color: black;
+}
+
+a:visted {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+  box-shadow: 4px grey;
+}
+
+.homeCard {
+  height: 50vh;
+  margin: 1.5vh 0;
+}
+
+.textOverflow {
+  overflow: scrollbar;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.cardbody {
+  padding-bottom: 2vh;
 }

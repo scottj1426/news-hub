@@ -1,13 +1,25 @@
-<div>
+<div class="container">
 
-This is the home view
-
+    <!--
 <h1> splash page </h1>
   <ul ng-repeat="article in articles">
     <li><a href="{{article.url}}"><img style="height: 150px; width: 200px"src="{{article.urlToImage}}" alt=""></a></li>
     <li>{{article.title}}</li>
     <li>{{article.description}}</li>
-  </ul>
+  </ul> -->
 
+    <!--Card image-->
+    <div class="row">
 
+        <div class="view overlay hm-white-slight col-lg-3 col-md-4 col-sm-6" ng-repeat="article in articles">
+              <a href="{{article.url}}">
+              <div class="card hoverable homeCard">
+                  <img src="{{article.urlToImage}}" class="img-card-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{article.title}}</h5>
+                      <p class="card-text">{{article.description}}</p>
+                    </div>
+              </a>
+          </div>
+    </div>
 </div>
