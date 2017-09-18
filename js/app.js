@@ -6,7 +6,7 @@ angular
     $stateProvider
       .state("home", {
         url: "/",
-        templateUrl: "/views/home.html",
+        templateUrl: "./views/home.html",
         controller: "homeCtrl",
         resolve: {
           articles: function(newsSrv) {
@@ -26,14 +26,14 @@ angular
       })
       .state("newsCat", {
         url: "/config",
-        templateUrl: "/views/newsCat.html"
+        templateUrl: "/.views/newsCat.html"
       })
       .state("news", {
         url: "/config2",
-        templateUrl: "/views/news.html"
+        templateUrl: "./views/news.html"
       })
       .state("settings", {
         url: "/settings",
-        templateUrl: "/views/settings.html"
+        templateUrl: "/.views/settings.html"
       });
   });
