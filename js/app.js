@@ -26,7 +26,7 @@ angular
       })
       .state("newsCat", {
         url: "/config",
-        templateUrl: "/.views/newsCat.html"
+        templateUrl: "./views/newsCat.html"
       })
       .state("news", {
         url: "/config2",
@@ -34,6 +34,6 @@ angular
       })
       .state("settings", {
         url: "/settings",
-        templateUrl: "/.views/settings.html"
+        templateUrl: "./views/settings.html"
       });
   });
