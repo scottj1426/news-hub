@@ -11,7 +11,7 @@
     <!--Card image-->
     <div class="row">
 
-        <div class="view overlay hm-white-slight col-lg-4" ng-repeat="article in articles">
+        <div class="view overlay hm-white-slight col-lg-4" ng-repeat="article in articles" ng-if="articles">
               <a href="{{article.url}}">
               <div class="card hoverable homeCard">
                   <img src="{{article.urlToImage}}" class="img-card-top" alt="">
